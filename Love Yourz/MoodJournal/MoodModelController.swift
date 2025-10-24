@@ -2,8 +2,7 @@
 //  MoodModelController.swift
 //  MoodDiary
 //
-//  Created by Nelson Gonzalez on 3/27/20.
-//  Copyright © 2020 Nelson Gonzalez. All rights reserved.
+//  Created by Sanchitha Dinesh on 7/29/24.
 //
 
 import Foundation
@@ -13,14 +12,14 @@ class MoodModelController: ObservableObject {
     
     //MARK: - Properties
     @Published var moods: [Mood] = []
-        
+
     init() {
         loadFromPersistentStore()
     }
     
     
     //MARK: - CRUD Functions
-    func createMood(emotion: Emotion, comment: String?, date: Date) {
+    func createMood(emotion: EmotionState, comment: String?, date: Date) {
 
         let newMood = Mood(emotion: emotion, comment: comment, date: date)
         

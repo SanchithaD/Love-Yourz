@@ -12,6 +12,7 @@ struct ImageNote : Codable, Hashable, Identifiable {
     var id = UUID()
     var image: Data
     var title: String
+    var selectedColor: Array<CGFloat>
     var description: String
 }
 
@@ -35,22 +36,23 @@ struct ImageNote : Codable, Hashable, Identifiable {
         imageNote = []
     }
     
-    func addNote(image: UIImage, title: String, desc: String) {
+    func addNote(image: UIImage, title: String, desc: String, color: Array<CGFloat>) {
         if let pngRepresentation = image.pngData() {
 
-            let tempNote = ImageNote(image: pngRepresentation, title: title, description: desc)
+            let tempNote = ImageNote(image: pngRepresentation, title: title, selectedColor: color, description: desc)
             imageNote.insert(tempNote, at: 0)
             print("Note added!")
             saveData()
         }
     }
     
-    func editNote(id: UUID, title: String, description: String) {
+    func editNote(id: UUID, title: String, description: String, color: Array<CGFloat>) {
         if let note = imageNote.first(where: { $0.id == id }) {
             let index = imageNote.firstIndex(of: note)
         
             imageNote[index!].title = title
             imageNote[index!].description = description
+            imageNote[index!].selectedColor = color
         }
     }
     

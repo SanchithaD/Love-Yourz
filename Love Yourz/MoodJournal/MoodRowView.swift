@@ -2,8 +2,7 @@
 //  MoodRowView.swift
 //  MoodDiary
 //
-//  Created by Nelson Gonzalez on 3/27/20.
-//  Copyright © 2020 Nelson Gonzalez. All rights reserved.
+//  Created by Sanchitha Dinesh on 7/29/24.
 //
 
 import SwiftUI
@@ -12,46 +11,43 @@ struct MoodRowView: View {
     var mood: Mood
     
     var body: some View {
-  ZStack {
-  
-      Rectangle().fill(Color(hue: 0.75, saturation: 0.4, brightness: 1.0)).cornerRadius(10)
-        HStack {
-            VStack {
-                Text(mood.monthString)
+        ZStack {
+            HStack {
+                Text(mood.monthString + " \(mood.dayAsInt)")
                     .fontWeight(.bold)
-                    .foregroundColor(Color(hue: 0.769, saturation: 1.0, brightness: 0.411))
-                Text("\(mood.dayAsInt)")
-                    .fontWeight(.bold)
-                    .foregroundColor(Color(hue: 0.769, saturation: 1.0, brightness: 0.411))
-            
+                    .foregroundColor(Color(red: 99/255, green: 115/255, blue: 106/255))
+                Spacer().frame(width: 30)
+                Text(mood.comment?.prefix(50) ?? "Blank").font(.footnote).fontWeight(.regular)
+                    .foregroundColor(.black)
+                
+                
             }
-            Text(mood.comment ?? "No comment made.").font(.footnote).fontWeight(.regular).foregroundColor(Color(hue: 0.769, saturation: 1.0, brightness: 0.411)).bold()
-            
-            Spacer()
-            
-            moodImage()
-           
-            }.foregroundColor(mood.emotion.moodColor).padding()
         }
     }
     
     func moodImage() -> some View {
         var imageName = "none"
         
-        switch mood.emotion.state {
+        switch mood.emotion {
         case .happy:
             imageName = "happy"
-        case .meh:
-            imageName = "meh"
+        case .angry:
+            imageName = "angry"
         case .sad:
             imageName = "sad"
+        case .confused:
+            imageName = "confused"
+        case .loved:
+            imageName = "loved"
+        case .scared:
+            imageName = "scared"
         }
-        return Image(imageName).resizable().frame(width: 20, height: 20)
+        return Image(imageName).resizable().frame(width: 60, height: 50)
     }
 }
 
 struct MoodRowView_Previews: PreviewProvider {
     static var previews: some View {
-        MoodRowView(mood: Mood(emotion: Emotion(state: .happy, color: .happyColor), comment: "Test", date: Date()))
+        MoodRowView(mood: Mood(emotion: .happy, comment: "Test", date: Date()))
     }
 }

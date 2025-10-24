@@ -2,8 +2,7 @@
 //  DayCellView.swift
 //  MoodDiary
 //
-//  Created by Nelson Gonzalez on 4/8/20.
-//  Copyright © 2020 Nelson Gonzalez. All rights reserved.
+//  Created by Sanchitha Dinesh on 7/29/24.
 //
 
 import SwiftUI
@@ -18,15 +17,8 @@ struct DayCellView: View {
         VStack {
         Text(day.dayName).frame(width: 32, height: 32)
             .foregroundColor(day.textColor)
-           // .background(day.backgroundColor)
-          //  .clipShape(RoundedRectangle(cornerRadius: 10))
             .clipped()
-//            .onTapGesture {
-//                if self.day.disabled == false && self.day.selectableDays {
-//                    self.day.isSelected.toggle()
-//                }
-//        }
-        
+
             moodText()
         
         }.background(day.backgroundColor).clipShape(RoundedRectangle(cornerRadius: 10)).onTapGesture {
@@ -39,15 +31,20 @@ struct DayCellView: View {
     func moodText() -> some View {
         var imageName = "none"
         for m in moodModelController.moods {
-           // if m.date.dateToString(format: "d") == day.dayName {
             if m.monthString == day.monthString && m.dayAsInt == day.dayAsInt && m.year == day.year {
-              switch m.emotion.state {
+              switch m.emotion {
                 case .happy:
                     imageName = "happy"
-                case .meh:
-                    imageName = "meh"
+                case .angry:
+                    imageName = "angry"
                 case .sad:
                     imageName = "sad"
+                case .confused:
+                    imageName = "confused"
+                case .loved:
+                    imageName = "loved"
+                case .scared:
+                    imageName = "scared"
                 }
                 return Image(imageName).resizable().frame(width: 20, height: 20).opacity(1)
             }

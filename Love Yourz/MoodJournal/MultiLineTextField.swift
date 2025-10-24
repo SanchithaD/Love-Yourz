@@ -2,8 +2,7 @@
 //  MultiLineTextField.swift
 //  MoodDiary
 //
-//  Created by Nelson Gonzalez on 3/27/20.
-//  Copyright © 2020 Nelson Gonzalez. All rights reserved.
+//  Created by Sanchitha Dinesh on 7/29/24.
 //
 
 import Foundation
@@ -23,19 +22,21 @@ struct MultiLineTextField: UIViewRepresentable {
         let text = UITextView()
         text.isEditable = true
         text.isUserInteractionEnabled = true
-        if self.txt != "" {
+        if self.txt != nil {
             
             text.text = self.txt
             text.textColor = .black
         } else {
             
-            text.text = "Type Something"
-            text.textColor = .gray
+            text.text = ""
+            text.textColor = .black
         }
         
-       // text.textColor = .gray
-        text.backgroundColor = UIColor(red: 239/255, green: 243/255, blue: 244/255, alpha: 1)
-        text.font = .systemFont(ofSize: 20)
+        text.layer.borderColor = UIColor(red: 99/255, green: 115/255, blue: 106/255, alpha: 1).cgColor
+        text.layer.borderWidth = 1.0
+        text.layer.cornerRadius = 5
+        text.backgroundColor = UIColor(.clear)
+        text.font = .systemFont(ofSize: 16)
         text.returnKeyType = .done
         text.delegate = context.coordinator
         text.inputAccessoryView = UIView()//Removes the "done" button from the top of the keyboard.

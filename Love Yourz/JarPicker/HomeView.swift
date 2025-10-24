@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var imageData : ImageData
     
+    
     var body: some View {
         VStack{
             List {
@@ -19,7 +20,8 @@ struct HomeView: View {
                             Image(uiImage: UIImage(data: note.image)!)
                                 .resizable()
                                 .frame(width: 50, height: 50, alignment: .center)
-                            
+                            Image(systemName: Constants.Icons.line3HorizontalCircleFill)
+                                .foregroundColor(Color(red: note.selectedColor[0], green: note.selectedColor[1], blue: note.selectedColor[2]))
                             VStack(alignment: .leading) {
                                 Text(note.title)
                                     .lineLimit(2)

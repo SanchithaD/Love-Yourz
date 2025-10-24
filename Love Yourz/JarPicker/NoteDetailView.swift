@@ -7,10 +7,43 @@
 
 import SwiftUI
 
+extension Color {
+    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, opacity: CGFloat) {
+
+        #if canImport(UIKit)
+        typealias NativeColor = UIColor
+        #elseif canImport(AppKit)
+        typealias NativeColor = NSColor
+        #endif
+
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var o: CGFloat = 0
+
+        guard NativeColor(self).getRed(&r, green: &g, blue: &b, alpha: &o) else {
+            // You can handle the failure here as you want
+            return (0, 0, 0, 0)
+        }
+
+        return (r, g, b, o)
+    }
+
+    var hex: String {
+        String(
+            format: "#%02x%02x%02x%02x",
+            Int(components.red * 255),
+            Int(components.green * 255),
+            Int(components.blue * 255),
+            Int(components.opacity * 255)
+        )
+    }
+}
+
 struct NoteDetailView: View {
     @EnvironmentObject var imageData : ImageData
     @State var note: ImageNote
-    @State private var selectedColor: Color = .green
+    @State var selectedColor: Color = .green
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -54,7 +87,7 @@ struct NoteDetailView: View {
                     HStack {
                         Spacer()
                         Button("Confirm changes") {
-                            imageData.editNote(id: note.id, title: note.title, description: note.description)
+                            imageData.editNote(id: note.id, title: note.title, description: note.description, color: [selectedColor.components.red, selectedColor.components.green, selectedColor.components.blue])
                             presentationMode.wrappedValue.dismiss()
                         }
                         Spacer()
@@ -64,12 +97,12 @@ struct NoteDetailView: View {
     }
     
     
-    struct NoteDetailView_Previews: PreviewProvider {
-        static var previews: some View {
-            let tempImage = UIImage(systemName: "map")?.pngData()
-            
-            NoteDetailView(note: ImageNote(id: UUID(), image: tempImage!, title: "Test", description: "Test Description"))
-                .environmentObject(ImageData())
-        }
-    }
+//    struct NoteDetailView_Previews: PreviewProvider {
+//        static var previews: some View {
+//            let tempImage = UIImage(systemName: "map")?.pngData()
+//            
+//            NoteDetailView(note: ImageNote(id: UUID(), image: tempImage!, title: "Test", description: "Test Description"))
+//                .environmentObject(ImageData())
+//        }
+//    }
 }

@@ -2,8 +2,7 @@
 //  MonthView.swift
 //  MoodDiary
 //
-//  Created by Nelson Gonzalez on 4/8/20.
-//  Copyright © 2020 Nelson Gonzalez. All rights reserved.
+//  Created by Sanchitha Dinesh on 7/29/24.
 //
 
 import SwiftUI

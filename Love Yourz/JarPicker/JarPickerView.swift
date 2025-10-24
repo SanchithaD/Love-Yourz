@@ -57,7 +57,7 @@ struct JarPickerView: View {
                 ImagePicker(sourceType: .photoLibrary) { image in
                     imageData.addNote(image: image,
                                       title: "Untitled",
-                                      desc: "")
+                                      desc: "", color: [0, (128/255), 0])
                 }
             }
             .toolbar {

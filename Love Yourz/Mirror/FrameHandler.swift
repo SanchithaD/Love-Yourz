@@ -7,6 +7,7 @@
 
 import AVFoundation
 import CoreImage
+import Combine
 
 class FrameHandler: NSObject, ObservableObject {
     @Published var frame: CGImage?
@@ -14,7 +15,8 @@ class FrameHandler: NSObject, ObservableObject {
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
     private let context = CIContext()
-
+    private var frameSubject = PassthroughSubject<CGImage, Never>()
+    private var cancellables = Set<AnyCancellable>()
     
     override init() {
         super.init()
@@ -23,6 +25,13 @@ class FrameHandler: NSObject, ObservableObject {
             self.setupCaptureSession()
             self.captureSession.startRunning()
         }
+        
+        frameSubject
+                    .receive(on: DispatchQueue.main) // Ensure updates happen on the main thread
+                    .sink { [weak self] cgImage in
+                        self?.frame = cgImage
+                    }
+                    .store(in: &cancellables)
     }
     
     func checkPermission() {
@@ -69,9 +78,10 @@ extension FrameHandler: AVCaptureVideoDataOutputSampleBufferDelegate {
         guard let cgImage = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else { return }
         
         // All UI updates should be/ must be performed on the main queue.
-        DispatchQueue.main.async { [unowned self] in
-            self.frame = cgImage
-        }
+        //DispatchQueue.main.sync { [unowned self] in
+        frameSubject.send(cgImage)
+
+        //}
     }
     
     private func imageFromSampleBuffer(sampleBuffer: CMSampleBuffer) -> CGImage? {

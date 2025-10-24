@@ -2,8 +2,7 @@
 //  AddMoodView.swift
 //  MoodDiary
 //
-//  Created by Nelson Gonzalez on 3/27/20.
-//  Copyright © 2020 Nelson Gonzalez. All rights reserved.
+//  Created by Sanchitha Dinesh on 7/29/24.
 //
 
 import SwiftUI
@@ -11,64 +10,153 @@ import SwiftUI
 struct AddMoodView: View {
     @ObservedObject var moodModelController: MoodModelController
     @Environment(\.presentationMode) var presentationMode
-    
+    @StateObject var speechRecognizer = SpeechRecognizer()
     @State var text: String? = nil
     @State private var emotionState: EmotionState = .happy
-    @State private var moodColor: MoodColor = .happyColor
     @State private var happyIsSelected = false
-    @State private var mehIsSelected = false
     @State private var sadIsSelected = false
-    @State private var counterLabel = "2000/2000"
+    @State private var angryIsSelected = false
+    @State private var scaredIsSelected = false
+    @State private var lovedIsSelected = false
+    @State private var confusedIsSelected = false
+    @State private var isRecording = false
     
+    @State private var counterLabel = "2000/2000"
+    var customGreen = Color(red: 186/255, green: 217/255, blue: 200/255)
     var body: some View {
-        VStack(spacing: 30) {
-            Text("Add a Mood Entry").font(.largeTitle)
-            HStack {
-                Button(action: {
-                    self.emotionState = .happy
-                    self.moodColor = .happyColor
-                    self.happyIsSelected = true
-                    self.mehIsSelected = false
-                    self.sadIsSelected = false
-                }) {
-                    Image("happy").resizable().frame(width: 50, height: 50).foregroundColor(.green).background(happyIsSelected ? Color.yellow : Color.clear).clipShape(Circle())
+        ScrollView {
+            VStack(spacing: 5) {
+                Spacer()
+                Text("How was your day?").bold().foregroundColor(Color(red: 99/255, green: 115/255, blue: 106/255))
+                ZStack(alignment: .center) {
+                    Image("notebook").resizable().frame(width: 400, height: 550)
+                    ZStack(alignment: .bottomTrailing) {
+                        HStack {
+                            Spacer().frame(width: 30)
+                            MultiLineTextField(txt: $text, counterLabel: $counterLabel).frame(width: 270, height: 470)
+                        }
+                        Text("Remaining: \(counterLabel)").font(.footnote).foregroundColor(Color(red: 99/255, green: 115/255, blue: 106/255)).padding([.bottom, .trailing], 8)
+                        
+                    }
                 }
                 
-                Button(action: {
-                    self.emotionState = .meh
-                    self.moodColor = .mehColor
-                    self.mehIsSelected = true
-                    self.happyIsSelected = false
-                    self.sadIsSelected = false
-                }) {
-                    Image("meh").resizable().frame(width: 50, height: 50).foregroundColor(.gray).background(mehIsSelected ? Color.yellow : Color.clear).clipShape(Circle())
+                HStack {
+                    Text("Feeling").bold().font(.system(size: 25))
+                    Spacer().frame(width:250)
                 }
-                
-                Button(action: {
-                    self.emotionState = .sad
-                    self.moodColor = .sadColor
-                    self.sadIsSelected = true
-                    self.happyIsSelected = false
-                    self.mehIsSelected = false
-                }) {
-                    Image("sad").resizable().frame(width: 50, height: 50).foregroundColor(.red).background(sadIsSelected ? Color.yellow : Color.clear).clipShape(Circle())
-                }
-            }
-            ZStack(alignment: .bottomTrailing) {
-            MultiLineTextField(txt: $text, counterLabel: $counterLabel).frame(height: 400).foregroundColor(.red)
-                Text("Remaining: \(counterLabel)").font(.footnote).foregroundColor(.purple).padding([.bottom, .trailing], 8)
-        }
-            Button(action: {
-                    self.moodModelController.createMood(emotion: Emotion(state: self.emotionState, color: self.moodColor), comment: self.text, date: Date())
-                    
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                Text("Add Mood Entry").bold().frame(width: UIScreen.main.bounds.width - 30, height: 50).background(Color.purple).foregroundColor(Color.white).cornerRadius(10)
-            }
-            Spacer()
-        }.padding()
-    }
+                HStack {
+                    Button(action: {
+                        self.emotionState = .happy
+                        self.happyIsSelected = true
+                        self.angryIsSelected = false
+                        self.sadIsSelected = false
+                        self.scaredIsSelected = false
+                        self.lovedIsSelected = false
+                        self.confusedIsSelected = false
+                        speechRecognizer.requestPermissions()
 
+                    }) {
+                        Image("happy").resizable().frame(width: 50, height:43).background(happyIsSelected ? customGreen : Color.clear).clipShape(Circle())
+                    }
+                    
+                    
+                    Button(action: {
+                        self.emotionState = .sad
+                        self.sadIsSelected = true
+                        self.happyIsSelected = false
+                        self.angryIsSelected = false
+                        self.scaredIsSelected = false
+                        self.lovedIsSelected = false
+                        self.confusedIsSelected = false
+                    }) {
+                        Image("sad").resizable().frame(width: 50, height: 43).background(sadIsSelected ? customGreen : Color.clear).clipShape(Circle())
+                    }
+                    Button(action: {
+                        self.emotionState = .angry
+                        self.sadIsSelected = false
+                        self.happyIsSelected = false
+                        self.angryIsSelected = true
+                        self.scaredIsSelected = false
+                        self.lovedIsSelected = false
+                        self.confusedIsSelected = false
+                    }) {
+                        Image("angry").resizable().frame(width: 50, height: 40).background(angryIsSelected ? customGreen : Color.clear).clipShape(Circle())
+                    }
+                    Button(action: {
+                        self.emotionState = .scared
+                        self.sadIsSelected = false
+                        self.happyIsSelected = false
+                        self.angryIsSelected = false
+                        self.scaredIsSelected = true
+                        self.lovedIsSelected = false
+                        self.confusedIsSelected = false
+                    }) {
+                        Image("scared").resizable().frame(width: 50, height: 40).background(scaredIsSelected ? customGreen : Color.clear).clipShape(Circle())
+                    }
+                    Button(action: {
+                        self.emotionState = .loved
+                        self.sadIsSelected = false
+                        self.happyIsSelected = false
+                        self.angryIsSelected = false
+                        self.scaredIsSelected = false
+                        self.lovedIsSelected = true
+                        self.confusedIsSelected = false
+                    }) {
+                        Image("loved").resizable().frame(width: 50, height: 50).background(lovedIsSelected ? customGreen : Color.clear).clipShape(Circle())
+                    }
+                    Button(action: {
+                        self.emotionState = .confused
+                        self.sadIsSelected = false
+                        self.happyIsSelected = false
+                        self.angryIsSelected = false
+                        self.scaredIsSelected = false
+                        self.lovedIsSelected = false
+                        self.confusedIsSelected = true
+                    }) {
+                        Image("confused").resizable().frame(width: 50, height: 50).background(confusedIsSelected ? customGreen : Color.clear).clipShape(Circle())
+                    }
+                    
+                }
+                Spacer().frame(height: 10)
+                HStack {
+                    Button(action: {
+                        self.moodModelController.createMood(emotion: self.emotionState, comment: self.text, date: Date())
+                        
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        
+                        Text("Add Journal Entry").bold().frame(width: UIScreen.main.bounds.width - 30, height: 50).background(customGreen).foregroundColor(Color.black).cornerRadius(10)
+                        
+                        
+                        
+                    }
+                    Button(action: {
+                        if !isRecording {
+                            speechRecognizer.transcribe()
+                        } else {
+                            speechRecognizer.stopTranscribing()
+                        }
+                        
+                        isRecording.toggle()
+                    }) {
+                        if isRecording == false {
+                            Image(systemName: "mic.fill")
+                                .font(.system(size: 45))
+                            
+                        } else {
+                            Image(systemName: "stop.circle.fill")
+                                .font(.system(size: 45))
+                            
+                        }
+                    }
+                }
+            }.padding()
+                .onChange(of: speechRecognizer.transcript) {
+                    text = speechRecognizer.transcript
+                }
+        }
+    }
+    
 }
 
 struct AddMoodView_Previews: PreviewProvider {

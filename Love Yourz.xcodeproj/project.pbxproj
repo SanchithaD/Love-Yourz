@@ -7,18 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF180A5F2C58AF9D00ECD666 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF180A5E2C58AF9D00ECD666 /* Journal.swift */; };
+		BF180A612C5990B300ECD666 /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF180A602C5990B300ECD666 /* JournalEntry.swift */; };
+		BF20AAC32C5C147500A8A7D8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20AAC22C5C147500A8A7D8 /* Date.swift */; };
+		BF20AAC52C5C149900A8A7D8 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20AAC42C5C149900A8A7D8 /* Recording.swift */; };
+		BF20AAC92C5C150F00A8A7D8 /* RecordingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20AAC82C5C150F00A8A7D8 /* RecordingList.swift */; };
+		BF2EDE1F2BC27D9E00D8D975 /* CloudFreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2EDE1E2BC27D9E00D8D975 /* CloudFreeViewController.swift */; };
 		BF636F1C2BC1C2210028C4A6 /* Love_YourzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636F1B2BC1C2210028C4A6 /* Love_YourzApp.swift */; };
 		BF636F1E2BC1C2210028C4A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636F1D2BC1C2210028C4A6 /* ContentView.swift */; };
 		BF636F202BC1C2220028C4A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF636F1F2BC1C2220028C4A6 /* Assets.xcassets */; };
-		BF636F232BC1C2220028C4A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF636F222BC1C2220028C4A6 /* Preview Assets.xcassets */; };
+		BF636F2B2BC1C2370028C4A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636F292BC1C2370028C4A6 /* ViewController.swift */; };
+		BF636F2C2BC1C2370028C4A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF636F2A2BC1C2370028C4A6 /* Extensions.swift */; };
+		BF695A512BC2505A00412D80 /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A412BC2505900412D80 /* GridStack.swift */; };
+		BF695A532BC2505A00412D80 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A432BC2505900412D80 /* CalendarView.swift */; };
+		BF695A542BC2505A00412D80 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A442BC2505900412D80 /* Mood.swift */; };
+		BF695A552BC2505A00412D80 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A452BC2505900412D80 /* MonthView.swift */; };
+		BF695A562BC2505A00412D80 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A462BC2505900412D80 /* Month.swift */; };
+		BF695A572BC2505A00412D80 /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A472BC2505900412D80 /* DayCellView.swift */; };
+		BF695A592BC2505A00412D80 /* AddMoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A492BC2505900412D80 /* AddMoodView.swift */; };
+		BF695A5A2BC2505A00412D80 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A4A2BC2505A00412D80 /* Day.swift */; };
+		BF695A5B2BC2505A00412D80 /* MoodModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A4B2BC2505A00412D80 /* MoodModelController.swift */; };
+		BF695A5C2BC2505A00412D80 /* MultiLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A4C2BC2505A00412D80 /* MultiLineTextField.swift */; };
+		BF695A5D2BC2505A00412D80 /* WeekdaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A4D2BC2505A00412D80 /* WeekdaysView.swift */; };
+		BF695A5E2BC2505A00412D80 /* MoodRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A4E2BC2505A00412D80 /* MoodRowView.swift */; };
+		BF695A5F2BC2505A00412D80 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A4F2BC2505A00412D80 /* Colors.swift */; };
+		BF695A602BC2505A00412D80 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A502BC2505A00412D80 /* Helper.swift */; };
+		BF695A632BC2544200412D80 /* AffirmationsMirror.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A622BC2544200412D80 /* AffirmationsMirror.swift */; };
+		BF695A672BC2577A00412D80 /* FrameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF695A662BC2577A00412D80 /* FrameHandler.swift */; };
+		BF90A9F02D3AF8E600C8190C /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF90A9EF2D3AF8E600C8190C /* SpeechRecognizer.swift */; };
+		BF9C4EB62BC2D7520050DEC7 /* AdventureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C4EB32BC2D7510050DEC7 /* AdventureView.swift */; };
+		BF9C4EB82BC2D7520050DEC7 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C4EB52BC2D7520050DEC7 /* PageView.swift */; };
+		BF9C4EBC2BC2FBA70050DEC7 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9C4EBA2BC2FBA70050DEC7 /* Story.swift */; };
+		BF9C4EBE2BC2FBBE0050DEC7 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = BF9C4EBD2BC2FBBE0050DEC7 /* Preview Content */; };
+		BFA1FC492BC1DFAD0027A890 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA1FC482BC1DFAD0027A890 /* art.scnassets */; };
+		BFD2F2FC2C5C6EE0007E8ECC /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2F2FA2C5C6EE0007E8ECC /* AudioRecorder.swift */; };
+		BFD2F2FD2C5C6EE0007E8ECC /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2F2FB2C5C6EE0007E8ECC /* AudioPlayer.swift */; };
+		BFD2F3012C5C93C6007E8ECC /* Love-Yourz-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD2F3002C5C93C6007E8ECC /* Love-Yourz-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF180A5E2C58AF9D00ECD666 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		BF180A602C5990B300ECD666 /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		BF20AAC22C5C147500A8A7D8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		BF20AAC42C5C149900A8A7D8 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		BF20AAC82C5C150F00A8A7D8 /* RecordingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingList.swift; sourceTree = "<group>"; };
+		BF2EDE1E2BC27D9E00D8D975 /* CloudFreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFreeViewController.swift; sourceTree = "<group>"; };
 		BF636F182BC1C2210028C4A6 /* Love Yourz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Love Yourz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF636F1B2BC1C2210028C4A6 /* Love_YourzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Love_YourzApp.swift; sourceTree = "<group>"; };
 		BF636F1D2BC1C2210028C4A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF636F1F2BC1C2220028C4A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BF636F222BC1C2220028C4A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BF636F292BC1C2370028C4A6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF636F2A2BC1C2370028C4A6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BF695A412BC2505900412D80 /* GridStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
+		BF695A432BC2505900412D80 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		BF695A442BC2505900412D80 /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		BF695A452BC2505900412D80 /* MonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		BF695A462BC2505900412D80 /* Month.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
+		BF695A472BC2505900412D80 /* DayCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
+		BF695A492BC2505900412D80 /* AddMoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMoodView.swift; sourceTree = "<group>"; };
+		BF695A4A2BC2505A00412D80 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		BF695A4B2BC2505A00412D80 /* MoodModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodModelController.swift; sourceTree = "<group>"; };
+		BF695A4C2BC2505A00412D80 /* MultiLineTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiLineTextField.swift; sourceTree = "<group>"; };
+		BF695A4D2BC2505A00412D80 /* WeekdaysView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekdaysView.swift; sourceTree = "<group>"; };
+		BF695A4E2BC2505A00412D80 /* MoodRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodRowView.swift; sourceTree = "<group>"; };
+		BF695A4F2BC2505A00412D80 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BF695A502BC2505A00412D80 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		BF695A622BC2544200412D80 /* AffirmationsMirror.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationsMirror.swift; sourceTree = "<group>"; };
+		BF695A662BC2577A00412D80 /* FrameHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameHandler.swift; sourceTree = "<group>"; };
+		BF90A9EF2D3AF8E600C8190C /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		BF9C4EB32BC2D7510050DEC7 /* AdventureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdventureView.swift; sourceTree = "<group>"; };
+		BF9C4EB52BC2D7520050DEC7 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		BF9C4EBA2BC2FBA70050DEC7 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		BF9C4EBD2BC2FBBE0050DEC7 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
+		BFA1FC482BC1DFAD0027A890 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		BFD2F2FA2C5C6EE0007E8ECC /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		BFD2F2FB2C5C6EE0007E8ECC /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		BFD2F3002C5C93C6007E8ECC /* Love-Yourz-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Love-Yourz-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +96,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF2EDE272BC2940400D8D975 /* Mirror */ = {
+			isa = PBXGroup;
+			children = (
+				BF695A622BC2544200412D80 /* AffirmationsMirror.swift */,
+				BF20AAC22C5C147500A8A7D8 /* Date.swift */,
+				BF20AAC42C5C149900A8A7D8 /* Recording.swift */,
+				BF20AAC82C5C150F00A8A7D8 /* RecordingList.swift */,
+				BFD2F2FB2C5C6EE0007E8ECC /* AudioPlayer.swift */,
+				BFD2F2FA2C5C6EE0007E8ECC /* AudioRecorder.swift */,
+				BF695A662BC2577A00412D80 /* FrameHandler.swift */,
+			);
+			path = Mirror;
+			sourceTree = "<group>";
+		};
 		BF636F0F2BC1C2210028C4A6 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +129,17 @@
 		BF636F1A2BC1C2210028C4A6 /* Love Yourz */ = {
 			isa = PBXGroup;
 			children = (
+				BFD2F3002C5C93C6007E8ECC /* Love-Yourz-Info.plist */,
 				BF636F1B2BC1C2210028C4A6 /* Love_YourzApp.swift */,
 				BF636F1D2BC1C2210028C4A6 /* ContentView.swift */,
+				BF636F2A2BC1C2370028C4A6 /* Extensions.swift */,
+				BF636F292BC1C2370028C4A6 /* ViewController.swift */,
+				BF2EDE1E2BC27D9E00D8D975 /* CloudFreeViewController.swift */,
+				BF9D05612C644DAF003B62FA /* Adventure */,
+				BF695A612BC2509500412D80 /* MoodJournal */,
+				BF2EDE272BC2940400D8D975 /* Mirror */,
 				BF636F1F2BC1C2220028C4A6 /* Assets.xcassets */,
+				BFA1FC482BC1DFAD0027A890 /* art.scnassets */,
 				BF636F212BC1C2220028C4A6 /* Preview Content */,
 			);
 			path = "Love Yourz";
@@ -62,9 +148,43 @@
 		BF636F212BC1C2220028C4A6 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				BF636F222BC1C2220028C4A6 /* Preview Assets.xcassets */,
+				BF9C4EBD2BC2FBBE0050DEC7 /* Preview Content */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BF695A612BC2509500412D80 /* MoodJournal */ = {
+			isa = PBXGroup;
+			children = (
+				BF180A5E2C58AF9D00ECD666 /* Journal.swift */,
+				BF695A492BC2505900412D80 /* AddMoodView.swift */,
+				BF90A9EF2D3AF8E600C8190C /* SpeechRecognizer.swift */,
+				BF695A432BC2505900412D80 /* CalendarView.swift */,
+				BF695A4F2BC2505A00412D80 /* Colors.swift */,
+				BF695A4A2BC2505A00412D80 /* Day.swift */,
+				BF695A472BC2505900412D80 /* DayCellView.swift */,
+				BF695A412BC2505900412D80 /* GridStack.swift */,
+				BF695A502BC2505A00412D80 /* Helper.swift */,
+				BF695A462BC2505900412D80 /* Month.swift */,
+				BF695A452BC2505900412D80 /* MonthView.swift */,
+				BF695A442BC2505900412D80 /* Mood.swift */,
+				BF695A4B2BC2505A00412D80 /* MoodModelController.swift */,
+				BF695A4E2BC2505A00412D80 /* MoodRowView.swift */,
+				BF180A602C5990B300ECD666 /* JournalEntry.swift */,
+				BF695A4C2BC2505A00412D80 /* MultiLineTextField.swift */,
+				BF695A4D2BC2505A00412D80 /* WeekdaysView.swift */,
+			);
+			path = MoodJournal;
+			sourceTree = "<group>";
+		};
+		BF9D05612C644DAF003B62FA /* Adventure */ = {
+			isa = PBXGroup;
+			children = (
+				BF9C4EBA2BC2FBA70050DEC7 /* Story.swift */,
+				BF9C4EB32BC2D7510050DEC7 /* AdventureView.swift */,
+				BF9C4EB52BC2D7520050DEC7 /* PageView.swift */,
+			);
+			path = Adventure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF636F232BC1C2220028C4A6 /* Preview Assets.xcassets in Resources */,
+				BFD2F3012C5C93C6007E8ECC /* Love-Yourz-Info.plist in Resources */,
+				BF9C4EBE2BC2FBBE0050DEC7 /* Preview Content in Resources */,
+				BFA1FC492BC1DFAD0027A890 /* art.scnassets in Resources */,
 				BF636F202BC1C2220028C4A6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +259,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF695A5C2BC2505A00412D80 /* MultiLineTextField.swift in Sources */,
+				BF90A9F02D3AF8E600C8190C /* SpeechRecognizer.swift in Sources */,
+				BF9C4EB82BC2D7520050DEC7 /* PageView.swift in Sources */,
+				BF2EDE1F2BC27D9E00D8D975 /* CloudFreeViewController.swift in Sources */,
+				BF695A512BC2505A00412D80 /* GridStack.swift in Sources */,
+				BF636F2B2BC1C2370028C4A6 /* ViewController.swift in Sources */,
+				BF695A602BC2505A00412D80 /* Helper.swift in Sources */,
+				BF180A5F2C58AF9D00ECD666 /* Journal.swift in Sources */,
+				BF695A672BC2577A00412D80 /* FrameHandler.swift in Sources */,
 				BF636F1E2BC1C2210028C4A6 /* ContentView.swift in Sources */,
+				BF695A562BC2505A00412D80 /* Month.swift in Sources */,
+				BF180A612C5990B300ECD666 /* JournalEntry.swift in Sources */,
+				BFD2F2FC2C5C6EE0007E8ECC /* AudioRecorder.swift in Sources */,
+				BF695A532BC2505A00412D80 /* CalendarView.swift in Sources */,
+				BF9C4EBC2BC2FBA70050DEC7 /* Story.swift in Sources */,
 				BF636F1C2BC1C2210028C4A6 /* Love_YourzApp.swift in Sources */,
+				BF695A5E2BC2505A00412D80 /* MoodRowView.swift in Sources */,
+				BF20AAC92C5C150F00A8A7D8 /* RecordingList.swift in Sources */,
+				BF9C4EB62BC2D7520050DEC7 /* AdventureView.swift in Sources */,
+				BF695A542BC2505A00412D80 /* Mood.swift in Sources */,
+				BF695A5D2BC2505A00412D80 /* WeekdaysView.swift in Sources */,
+				BF695A552BC2505A00412D80 /* MonthView.swift in Sources */,
+				BF636F2C2BC1C2370028C4A6 /* Extensions.swift in Sources */,
+				BF695A5B2BC2505A00412D80 /* MoodModelController.swift in Sources */,
+				BFD2F2FD2C5C6EE0007E8ECC /* AudioPlayer.swift in Sources */,
+				BF695A632BC2544200412D80 /* AffirmationsMirror.swift in Sources */,
+				BF695A5A2BC2505A00412D80 /* Day.swift in Sources */,
+				BF695A592BC2505A00412D80 /* AddMoodView.swift in Sources */,
+				BF695A5F2BC2505A00412D80 /* Colors.swift in Sources */,
+				BF20AAC32C5C147500A8A7D8 /* Date.swift in Sources */,
+				BF695A572BC2505A00412D80 /* DayCellView.swift in Sources */,
+				BF20AAC52C5C149900A8A7D8 /* Recording.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,22 +421,32 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Love Yourz/Preview Content\"";
 				DEVELOPMENT_TEAM = S3M269KQRH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Love-Yourz-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Love Yourz";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera for the augmented reality room mapping and affirmations mirror feature.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions for the affirmations feature.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Allow access to speech recognition to transcribe journal entries.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SanchithaDinesh.Love-Yourz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -298,22 +460,32 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Love Yourz/Preview Content\"";
 				DEVELOPMENT_TEAM = S3M269KQRH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Love-Yourz-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Love Yourz";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera for the augmented reality room mapping and affirmations mirror feature.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions for the affirmations feature.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Allow access to speech recognition to transcribe journal entries.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SanchithaDinesh.Love-Yourz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
